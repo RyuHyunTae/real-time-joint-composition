@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+ 	<typeAliases>
+ 		<!-- <typeAlias alias="sample" type="com.jh.biz.sample.SampleVO"></typeAlias> -->
+ 		<typeAlias alias="userVO" type="com.android.biz.user.UserVO"/>
+ 		<typeAlias alias="boardVO" type="com.android.biz.board.BoardVO"/>
+ 		<typeAlias alias="commentVO" type="com.android.biz.comment.CommentVO"/>
+ 		<typeAlias alias="musicVO" type="com.android.biz.music.MusicVO"/>
+ 	</typeAliases>
+ 	<mappers>
+ 		<!-- <mapper resource="mappings/sample-mapper.xml"></mapper> -->
+ 		<mapper resource="mappings/login-mapping.xml" />
+		<mapper resource="mappings/join-mapping.xml"/>
+		<mapper resource="mappings/update-mapping.xml"/>
+		<mapper resource="mappings/select-mapping.xml"/>
+		
+		<mapper resource="mappings/insertBoard-mapping.xml"/>
+		<mapper resource="mappings/updateBoard-mapping.xml"/>
+		<mapper resource="mappings/deleteBoard-mapping.xml"/>
+		<mapper resource="mappings/listBoard-mapping.xml"/>
+		<mapper resource="mappings/selectBoard-mapping.xml"/>
+		
+		<mapper resource="mappings/insertComment-mapping.xml"/>
+		<mapper resource="mappings/deleteComment-mapping.xml"/>
+		<mapper resource="mappings/listComment-mapping.xml"/>
+		
+		<mapper resource="mappings/music-mapping.xml"/>
+ 	</mappers>
+</configuration>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.rog/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="musicDAO">
+
+	<select id="insertMusic" resultType="musicVO">
+		INSERT 
+		INTO music(seq,musicid,x,y,exist) 
+		VALUES(#{seq},#{musicId},#{x},#{y},1)
+	</select>
+	
+	<select id="updateMusic" resultType="musicVO">
+		UPDATE 
+		music set x=#{x},y=#{y},exist=#{exist}
+		WHERE seq=#{seq} AND musicid=#{musicId}
+	</select>
+	
+	<select id="deleteMusic" resultType="musicVO">
+		DELETE 
+		FROM music
+		WHERE seq=#{seq} AND musicid=#{musicId}
+	</select>
+	
+	<select id="listMusic" resultType="musicVO">
+		SELECT *
+		FROM music
+		WHERE seq=#{seq}
+	</select>
+</mapper>
